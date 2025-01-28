@@ -1,0 +1,18 @@
+[project]
+name = "pypoacars"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Preston Willen",email = "prestonwillen@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "numpy (>=2.2.2,<3.0.0)",
+    "scipy (>=1.15.1,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
