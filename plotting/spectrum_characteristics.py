@@ -2,7 +2,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 
-def plot_fft(signal: np.ndarray, fs: float, order_mag: float = 1e3, title='') -> None:
+def plot_fft(signal: np.ndarray, fs: float, order_mag: float = 1e3, title="") -> None:
     """
     Plot the FFT of a signal.
     :param signal: the signal to plot
@@ -37,7 +37,8 @@ def plot_fft(signal: np.ndarray, fs: float, order_mag: float = 1e3, title='') ->
     plt.ylabel(f"{title} Freq Phase")
     plt.show()
 
-def plot_psd(signal: np.ndarray, fs: float, order_mag = 1e3, title='') -> None:
+
+def plot_psd(signal: np.ndarray, fs: float, order_mag=1e3, title="") -> None:
     """
     Plot the PSD of a signal.
     :param signal: the signal to plot
@@ -65,7 +66,8 @@ def plot_psd(signal: np.ndarray, fs: float, order_mag = 1e3, title='') -> None:
     plt.ylabel(f"{title} PSD")
     plt.show()
 
-def plot_constellation(signal: np.ndarray, title='') -> None:
+
+def plot_constellation(signal: np.ndarray, title="") -> None:
     """
     Plot the constellation of a signal.
     :param signal: the signal to plot
@@ -73,13 +75,14 @@ def plot_constellation(signal: np.ndarray, title='') -> None:
     :return:
     """
     plt.title(f"{title} Constellation")
-    plt.plot(signal.real, signal.imag, '.')
+    plt.plot(signal.real, signal.imag, ".")
     plt.xlabel("I")
     plt.ylabel("Q")
     plt.grid(True)
     plt.show()
 
-def plot_shifted_constellation(signal: np.ndarray, shift: int, title='') -> None:
+
+def plot_shifted_constellation(signal: np.ndarray, shift: int, title="") -> None:
     """
     Plot the constellation of a signal.
     :param signal: the signal to plot
@@ -88,13 +91,16 @@ def plot_shifted_constellation(signal: np.ndarray, shift: int, title='') -> None
     :return:
     """
     plt.title(f"{title} Shifted Constellation")
-    plt.plot(signal.real[:-shift], signal.imag[shift:], '.')
+    plt.plot(signal.real[:-shift], signal.imag[shift:], ".")
     plt.xlabel("I")
     plt.ylabel("Q")
     plt.grid(True)
     plt.show()
 
-def plot_all(signal: np.ndarray, fs: float, shift: int, order_mag: float = 1e3, title='') -> None:
+
+def plot_all(
+    signal: np.ndarray, fs: float, shift: int, order_mag: float = 1e3, title=""
+) -> None:
     """
     Plot all the characteristics of a signal.
     :param signal: the signal to plot

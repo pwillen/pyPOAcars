@@ -1,7 +1,9 @@
 import numpy as np
 
 
-def decimate(signal, decimation_factor: int, fs: float, samples_per_symbol: int) -> tuple[np.ndarray, float, int]:
+def decimate(
+    signal, decimation_factor: int, fs: float, samples_per_symbol: int
+) -> tuple[np.ndarray, float, int]:
     """
     Decimate a signal by a factor
     :param signal: The signal to decimate
@@ -11,4 +13,8 @@ def decimate(signal, decimation_factor: int, fs: float, samples_per_symbol: int)
     :return: The decimated signal
     """
 
-    return signal[::decimation_factor], fs // decimation_factor, samples_per_symbol // decimation_factor
+    return (
+        signal[::decimation_factor],
+        fs // decimation_factor,
+        samples_per_symbol // decimation_factor,
+    )

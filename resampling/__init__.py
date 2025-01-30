@@ -2,7 +2,9 @@ import numpy as np
 from scipy.signal import resample_poly
 
 
-def resample(signal: np.ndarray, down: int, up: int, samples_per_symbol: int) -> tuple[np.ndarray, int]:
+def resample(
+    signal: np.ndarray, down: int, up: int, samples_per_symbol: int
+) -> tuple[np.ndarray, int]:
     """
     Resample a signal
     :param signal: the signal to resample

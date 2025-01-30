@@ -1,7 +1,10 @@
 import numpy as np
 from scipy.signal import firwin
 
-def filter_taps(cutoff: float | np.ndarray, fs: float, num_taps: int = 101, **kwargs) -> np.ndarray:
+
+def filter_taps(
+    cutoff: float | np.ndarray, fs: float, num_taps: int = 101, **kwargs
+) -> np.ndarray:
     """
     Create filter taps for a filter.
     :param cutoff: Cutoff frequency
@@ -16,7 +19,15 @@ def filter_taps(cutoff: float | np.ndarray, fs: float, num_taps: int = 101, **kw
     # Normalize the filter taps to avoid unity gain
     return taps / np.sum(taps)
 
-def low_pass_filter(signal: np.ndarray, cutoff: float, fs: float, convolution_mode: str = 'same', num_taps: int = 101, **kwargs) -> np.ndarray:
+
+def low_pass_filter(
+    signal: np.ndarray,
+    cutoff: float,
+    fs: float,
+    convolution_mode: str = "same",
+    num_taps: int = 101,
+    **kwargs,
+) -> np.ndarray:
     """
     Apply a Low Pass Filter to a Signal
     :param signal: The Signal to filter

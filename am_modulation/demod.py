@@ -1,7 +1,9 @@
 import numpy as np
 
 
-def am_sync_demodulate(modulated_signal: np.ndarray, carrier_oscillator: np.ndarray) -> np.ndarray:
+def am_sync_demodulate(
+    modulated_signal: np.ndarray, carrier_oscillator: np.ndarray
+) -> np.ndarray:
     """
     Synchronous Real Envelope Detection
 
@@ -47,4 +49,4 @@ def am_squared_async_demodulate(modulated_signal: np.ndarray) -> np.ndarray:
     """
 
     # Square the signal to remove the negative values
-    return modulated_signal ** 2
+    return modulated_signal**2
