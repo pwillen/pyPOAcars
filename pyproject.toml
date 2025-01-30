@@ -10,10 +10,35 @@ requires-python = ">=3.12"
 dependencies = [
     "numpy (>=2.2.2,<3.0.0)",
     "scipy (>=1.15.1,<2.0.0)",
-    "matplotlib (>=3.10.0,<4.0.0)"
+    "matplotlib (>=3.10.0,<4.0.0)",
+    "ruff (>=0.9.3,<0.10.0)"
 ]
 
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[too.ruff]
+line-length = 120
+target-version = "py310"
+usafe-fixes = false
+
+[tool.ruff.lint]
+select = [
+    # pycodestyle
+    # "E",
+    # Pyflakes
+    "F",
+    # pyupgrade
+    "UP",
+    # flake8-bugbear
+    # "B",
+    # flake8-simplify
+    "SIM",
+    # isort
+    # "I",
+    # logging-f-string (G004)
+    "G004",
+]
+fixable = ["ALL"]
