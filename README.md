@@ -11,7 +11,7 @@ An application to demodulate and decode Plain Ol` Acars
 - Demodulate ACARS from iq file: `src.acars.demod`
 - Decode demodulated ACARS: `src.acars.parse_acars_message`
 - libacars integration to be implemented
-- An array of other DSP modules t
+- An array of other DSP modules 
 
 ### Supported Protocols
 - Plain Ol` ACARS i.e. MSK modulated 129 MHz - 137 MHz Frequencies
@@ -24,8 +24,8 @@ poetry install
 
 ## Usage
 So far I only have a basic python script `local_test.py` that reads an iq file and demodulates it.
-I will look into creating a CLI for usage something like: `python3 -m poacars -i iq_file -o output_file`.
-As well as making the project pip installable.
+I will look into creating a CLI for usage. Something like: `python3 -m poacars -i iq_file -o output_file`.
+I will also look into making the project pip installable.
 
 ## Credits
 - J.-M Friedt and https://sourceforge.net/projects/gr-acars/. This project is the python equivalent of the gr-acars c code
